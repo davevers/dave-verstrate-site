@@ -25,3 +25,6 @@ pnpm-debug.log*
 
 # nix
 .direnv
+
+# wrangler
+.wrangler
