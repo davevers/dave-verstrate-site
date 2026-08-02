@@ -1,0 +1,27 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "../layouts/Base.astro";
+
+const title = "Blog";
+const allPosts = await getCollection("blog");
+---
+
+<BaseLayout title={title}>
+    <h1>Blog</h1>
+    <ul>
+        {
+            allPosts.map((post) => (
+                <li class="test">
+                    <time datetime={post.data.pubDate.toISOString()}>
+                        {post.data.pubDate.toLocaleDateString("nl-NL", {
+                            day: "2-digit",
+                            month: "short",
+                            year: "numeric",
+                        })}
+                    </time>
+                    <a href={`/blog/${post.id}/`}>{post.data.title}</a>
+                </li>
+            ))
+        }
+    </ul>
+</BaseLayout>

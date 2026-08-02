@@ -1,0 +1,53 @@
+---
+import { getCollection } from "astro:content";
+import PageLayout from "../layouts/Base.astro";
+
+const allPosts = await getCollection("blog");
+const title = "Home";
+---
+
+<PageLayout title={title}>
+    <section class="hero">
+        <p>
+            Mijn persoonlijke blog en schrijfruimte. Notities en gedachten over
+            wat mij bezig houdt, voornamelijk een mix van code, platforms,
+            cloud-native, en zo nu en dan een halfbakken idee over de wereld om
+            mij heen.
+        </p>
+    </section>
+    <section class="writing">
+        <h2>Recent</h2>
+        <ul>
+            {
+                allPosts.map((post) => (
+                    <li class="test">
+                        <time datetime={post.data.pubDate.toISOString()}>
+                            {post.data.pubDate.toLocaleDateString("nl-NL", {
+                                day: "2-digit",
+                                month: "short",
+                                year: "numeric",
+                            })}
+                        </time>
+                        <a href={`/blog/${post.id}/`}>{post.data.title}</a>
+                    </li>
+                ))
+            }
+        </ul>
+    </section>
+</PageLayout>
+
+<style>
+    .hero {
+        margin-bottom: 76px;
+    }
+
+    .writing ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .writing a {
+        margin-left: 1rem;
+    }
+</style>
