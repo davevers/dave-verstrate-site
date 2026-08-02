@@ -38,7 +38,7 @@
             packages = with pkgs; [
               nodejs
               pnpm
-              yarn
+              yarn-berry
               self.formatter.${system}
             ];
           };
