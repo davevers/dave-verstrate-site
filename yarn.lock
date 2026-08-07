@@ -1167,6 +1167,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@lucide/astro@npm:^1.28.0":
+  version: 1.28.0
+  resolution: "@lucide/astro@npm:1.28.0"
+  peerDependencies:
+    astro: ^4 || ^5 || ^6 || ^7
+  checksum: 10c0/674d0d6e961ad43613b50a201b796259958ec17a5824534143879f9e8a849c7c4b528bb83f8c5af4dd500bf3608face496e0f428aa679611c964e7d464119a76
+  languageName: node
+  linkType: hard
+
 "@napi-rs/wasm-runtime@npm:^1.1.6, @napi-rs/wasm-runtime@npm:^1.2.0":
   version: 1.2.1
   resolution: "@napi-rs/wasm-runtime@npm:1.2.1"
@@ -2608,6 +2617,7 @@ __metadata:
   resolution: "new-project@workspace:."
   dependencies:
     "@astrojs/cloudflare": "npm:^14.1.7"
+    "@lucide/astro": "npm:^1.28.0"
     astro: "npm:^7.1.6"
     wrangler: "npm:^4.118.0"
   languageName: unknown
