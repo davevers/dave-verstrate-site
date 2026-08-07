@@ -1,17 +1,24 @@
 ---
-
+import ThemeIcon from "./ThemeIcon.astro";
 ---
 
 <header>
     <nav>
         <div id="main-menu" class="nav-links">
-            <a href="/" style="margin-right:auto;">Dave Verstrate</a>
-            <a href="/about/">Over mij</a>
+            <span class="title"><a href="/">dave verstrate;</a></span>
+            <a href="/about/" style="margin-right:15px">Over</a>
+            <ThemeIcon />
         </div>
     </nav>
 </header>
 
 <style>
+    .title {
+        margin-right: auto;
+        font-size: 150%;
+        font-family: var(--font-mono);
+    }
+
     .nav-links {
         width: min(100% - 2rem, var(--content-width));
         display: flex;
@@ -21,12 +28,6 @@
     }
 
     .nav-links a {
-        color: var(--color-text);
         text-decoration: none;
-    }
-
-    .nav-links a:hover,
-    .nav-links a:focus {
-        background-color: orange;
     }
 </style>
