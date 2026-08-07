@@ -7,7 +7,7 @@ const title = "Home";
 ---
 
 <PageLayout title={title}>
-    <section class="hero">
+    <section>
         <p>
             Mijn persoonlijke blog en schrijfruimte. Notities en gedachten over
             wat mij bezig houdt, voornamelijk een mix van code, platforms,
@@ -15,8 +15,9 @@ const title = "Home";
             mij heen.
         </p>
     </section>
+    <hr />
     <section class="writing">
-        <h2>Recent</h2>
+        <h2>Schrijfwerk</h2>
         <ul>
             {
                 allPosts.map((post) => (
