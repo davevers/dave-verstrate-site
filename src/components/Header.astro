@@ -5,29 +5,40 @@ import ThemeIcon from "./ThemeIcon.astro";
 <header>
     <nav>
         <div id="main-menu" class="nav-links">
-            <span class="title"><a href="/">dave verstrate;</a></span>
-            <a href="/about/" style="margin-right:15px">Over</a>
+            <span class="title"><a href="/">Dave Verstrate</a></span>
+            <span class="menu-right">
+                <a href="/about/" style="margin-right:15px">Over</a>
+            </span>
             <ThemeIcon />
         </div>
     </nav>
 </header>
 
 <style>
-    .title {
-        margin-right: auto;
-        font-size: 150%;
-        font-family: var(--font-mono);
-    }
-
     .nav-links {
-        width: min(100% - 2rem, var(--content-width));
         display: flex;
-        padding-block: 3rem;
+        padding-bottom: 2rem;
         margin-inline: auto;
         align-items: center;
+        font-size: 1.2rem;
+        color: var(--color-muted);
     }
-
     .nav-links a {
         text-decoration: none;
+    }
+
+    .title {
+        margin-right: auto;
+        /*font-size: 1.4rem;
+        font-family: var(--font-mono);*/
+    }
+    .title a {
+    }
+
+    .menu-right a {
+        color: var(--color-muted);
+    }
+    .menu-right a:hover {
+        color: var(--color-accent);
     }
 </style>
