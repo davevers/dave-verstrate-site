@@ -5,7 +5,28 @@ const { frontmatter } = Astro.props;
 
 <BaseLayout title={frontmatter.title}>
     <h1>{frontmatter.title}</h1>
-    <p>{frontmatter.pubDate.toString().slice(0, 10)}</p>
-    <p><em>{frontmatter.description}</em></p>
+    <div class="date">
+        <time datetime={frontmatter.pubDate.toISOString()}>
+            {
+                frontmatter.pubDate.toLocaleDateString("nl-NL", {
+                    day: "numeric",
+                    month: "long",
+                    year: "numeric",
+                })
+            }
+        </time>
+    </div>
     <slot />
 </BaseLayout>
+
+<style>
+    h1 {
+        margin-bottom: 0.25em;
+    }
+
+    .date {
+        margin-top: 0;
+        color: var(--color-muted);
+        margin-bottom: 2rem;
+    }
+</style>

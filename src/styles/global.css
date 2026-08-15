@@ -1,5 +1,5 @@
 :root {
-    --content-width: 42rem;
+    --content-width: 40rem;
     --font-body: var(--font-inter), -apple-system, system-ui, sans-serif;
     --font-mono: var(--font-jetbrains), ui-monospace, SFMono-Regular, monospace;
 }
@@ -37,12 +37,12 @@
 html {
     font-family: var(--font-body);
     line-height: 1.5;
-    font-size: 110%;
+    font-size: 1.1rem;
     text-rendering: optimizeLegibility;
 }
 
 body {
-    margin: 0;
+    margin: 3rem 0 4rem;
     background: var(--color-background);
     color: var(--color-text);
     transition:
@@ -50,21 +50,18 @@ body {
         color 200ms ease;
 }
 
-/* Keep text readable on wide screens */
-main {
-    width: min(100% - 2rem, var(--content-width));
-    margin-inline: auto;
-}
-
 /* Basic typography */
 h1 {
-    font-size: 2.5rem;
-    line-height: 1.2;
+    font-size: 2rem;
+    line-height: 1.5;
+    margin-bottom: 2rem;
 }
 
 h2 {
-    font-size: 1.7rem;
+    font-size: 1.5rem;
     line-height: 1.3;
+    margin-top: 3rem;
+    margin-bottom: 1.5rem;
 }
 
 h3 {

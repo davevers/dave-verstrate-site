@@ -7,17 +7,16 @@ const title = "Home";
 ---
 
 <PageLayout title={title}>
-    <section>
+    <section class="hero">
         <p>
-            Mijn persoonlijke blog en schrijfruimte. Notities en gedachten over
-            wat mij bezig houdt, voornamelijk een mix van code, platforms,
-            cloud-native, en zo nu en dan een halfbakken idee over de wereld om
-            mij heen.
+            Welkom op mijn persoonlijke blog en schrijfruimte. Hier hou ik
+            gedachten en notities bij over over wat mij zo al bezig houdt;
+            voornamelijk een mix van code, infra, cloud-native en wat op dat
+            moment mijn interesse heeft.
         </p>
     </section>
-    <hr />
     <section class="writing">
-        <h2>Schrijfwerk</h2>
+        <h2>Blog</h2>
         <ul>
             {
                 allPosts.map((post) => (
@@ -39,7 +38,15 @@ const title = "Home";
 
 <style>
     .hero {
-        margin-bottom: 76px;
+        margin-bottom: 2rem;
+    }
+
+    h2 {
+        margin-top: 2rem;
+    }
+
+    .writing {
+        border-top: 1px solid var(--color-border);
     }
 
     .writing ul {
