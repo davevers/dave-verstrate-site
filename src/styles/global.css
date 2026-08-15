@@ -13,6 +13,7 @@
     --color-muted: #686b70;
     --color-accent: #657e5e;
     --color-border: #d8d1c3;
+    --color-selection: #dce6d3;
 }
 
 :root[data-theme="dark"] {
@@ -24,6 +25,7 @@
     --color-muted: #b5b1a8;
     --color-accent: #9cb889;
     --color-border: #484d4b;
+    --color-selection: #435244;
 }
 
 /* Use a predictable box model */
@@ -127,4 +129,8 @@ pre {
 :focus-visible {
     outline: 2px solid var(--color-accent);
     outline-offset: 3px;
+}
+
+::selection {
+    background-color: var(--color-selection);
 }
